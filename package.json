@@ -2,10 +2,10 @@
   "name": "express-line-webhook",
   "type": "module",
   "version": "0.1.0",
-  "main": "app.js",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "node --watch app.js"
+    "dev": "node --watch index.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
