@@ -15,9 +15,11 @@ app.get("/", (req, res) => {
   res.sendStatus(200)
 })
 
+
+
 app.post("/webhook", function (req, res) {
-  console.log('Recieve line webhook!');
-  res.send("HTTP POST request sent to the webhook URL!")
+  console.log(JSON.stringify(req.body));
+  res.send("HTTP POST request sent to the webhook URL!");
   // If the user sends a message to your bot, send a reply message
   if (req.body.events[0].type === "message") {
     // Message data, must be stringified
@@ -33,8 +35,7 @@ app.post("/webhook", function (req, res) {
           "text": "May I help you?"
         }
       ]
-    })
-
+    }) 
     // Request header
     const headers = {
       "Content-Type": "application/json",
